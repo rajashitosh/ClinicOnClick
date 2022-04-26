@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>Pharmacy History</title>
+</head>
+<body>
+	
+	<section class="mt-2">
+	  
+	  <div class="card">
+	     
+	     <div class="card-body">
+	     
+	       <h1 class="text-center">Pharmacy History</h1>
+	    
+	            <table class="table">
+			  <thead>
+			    <tr>
+			      <th scope="col">#Id</th>
+			      <th scope="col">Pin Code</th>
+			      <th scope="col">Address</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			  
+			    <tr th:each="p : ${pharmacy}">
+			      <th scope="row" >
+			      
+			       <a th:href="@{'/user/'+${p.Pid}+'/pharmacy'}"> <span th:text="${p.Pid}"></span> </a>
+			       
+			       <img class="my_profile_picture" src="" th:src="@{'/image/'+${p.imgage}}" alt="prescription image" />
+			      
+			      </th>
+			      
+			      <td th:text="${p.pinCode}">
+		
+			      </td>
+			      
+			      
+			      
+			      <td th:text="${p.address}"></td>
+			     
+			      
+			    </tr>
+			    
+			  </tbody>
+			</table>
+	            
+	            
+	            <!-- pagination part  --> 
+	            
+	            <nav aria-label="Page navigation example">
+						  <ul class="pagination">
+						  
+						    <li th:if="${currentPage!=0}" class="page-item"><a class="page-link" th:href="@{'/user/show-pharmacy/'+${currentPage-1}}">Previous</a></li>
+						    
+						    <li th:classappend="${currentPage==i-1?'active':''}" th:each="i : ${#numbers.sequence(1,totalPages)}" class="page-item"><a class="page-link" th:href="@{'/user/show-pharmacy/'+${i-1}}"><span th:text="${i}"></span></a></li> 
+						 
+						    <li th:if="${currentPage+1 != totalPages}" class="page-item"><a class="page-link" th:href="@{'/user/show-pharmacy/'+${currentPage+1}}">Next</a></li>
+						  </ul>
+				</nav>
+	           
+	            
+	     </div>
+	  
+	  </div>
+
+	  
+	</section>
+	
+</body>
+</html>

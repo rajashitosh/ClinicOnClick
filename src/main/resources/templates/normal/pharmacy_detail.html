@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>Pharmacy Details</title>
+</head>
+<body>
+	
+	<section class="mt-2">
+	  
+	  
+	  <div class="card">
+	        
+	        <div class="card-body" th:if="${image}">
+	           
+	           <div class="container text-center">
+	                  
+	               <h4>Prescription Image</h4>
+	                <img style="height: 800px; width: 60vw" class="my_profile_picture" src="" th:src="@{'/image/'+${image}}" alt="Prescription Image" />
+	                
+	                <hr />
+	                 
+	                <div class="description mt-4">
+					    
+					    <h3>Address :-</h3>
+					    
+					   <h3>  <th:block th:text="${address}"> </th:block> </h3>
+					  
+					  
+					  </div>
+	             
+	           
+	           </div>
+	        
+	        </div>
+	        
+	        <h1 class="text-center m-2" th:unless="${image}">You don't have permission to see this contact...</h1>
+	    
+	    </div>
+
+	  
+	  
+	</section>
+	
+</body>
+</html>

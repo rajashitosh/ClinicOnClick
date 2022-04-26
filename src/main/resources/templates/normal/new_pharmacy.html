@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>}Pharamcy Page</title>
+</head>
+<body>
+	
+	<section>
+	  
+	  <div class="card margin3">
+	      
+	      <div class="card-body">
+	         
+	         <h1 class="text-center">Pharmacy</h1>
+	            
+	            <div class="container-fluid">
+	                
+	                <div class="row">
+	                    
+	                    <div class="col-md-8 offset-md-2">
+	                    
+	                        <form action="#"  th:object="${pharmacy}" 
+	                          enctype="multipart/form-data"
+	                          method="post"
+	                          th:action="@{/user/process-pharmacy}"
+	                          class="mt-2"	                       
+	                        >
+	                       
+	                         <!-- Pin Code-->
+	                        
+	                        
+	                           <div class="input-group mt-3">
+	                           
+	                           <div class="input-group-prepend">
+	                               
+	                               <div class="input-group-text margin2">
+	                                  
+	                                  Pin
+	                               
+	                               </div>
+	                               
+	                           </div>
+	                            
+	                            <input th:value="${pharmacy.pinCode}" required type="text" id="pinCode" name="pinCode" placeholder="Enter Pin Code Here" class="form-control" />
+	                       
+	                       </div>
+	                        
+	                        
+	              
+	                            
+	                      <!-- Address -->      
+	                            
+	                            <div class="form-group mt-3">
+	                            
+	                                <textarea required placeholder="Enter your address" name="address" id="address" class="form-control" rows="10"></textarea>
+	                            
+	                            </div>
+	                          
+	                          
+	                      <!-- Prescription -->
+	                            
+	                            
+	                            <label class="mt-2" > <b> Upload Prescription </b></label>
+	                            
+	                            <div class="custom-file mt-2">
+	                            
+	                                
+	                                <input  type="file" name="profileImage" />
+	                            
+	                            
+	                            </div>
+	                                   
+	                            
+	                            <div class="container mt-2 text-center">
+	                               
+	                               <button class="btn btn-outline-primary">Save Contact</button>
+	                            
+	                            </div>
+	                            
+	                        
+	                       </form>
+	                       
+	                      
+	                    </div>
+	                   
+	                </div>
+	               
+	            </div>
+	           
+	      </div>
+	   
+	   
+	   </div>
+	  
+	
+	  
+	  
+	</section>
+	
+</body>
+</html>

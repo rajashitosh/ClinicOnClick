@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>Appointment History</title>
+</head>
+<body>
+	
+	<section>
+	 
+	<div class="card">
+	     
+	     <div class="card-body">
+	     
+	       <h1 class="text-center">Appointment History</h1>
+	    
+	            <table class="table">
+			  <thead>
+			    <tr>
+			      <th scope="col">#Id</th>
+			      <th scope="col">Name</th>
+			      <th scope="col">Doctor Name</th>
+			      <th scope="col">Email</th>
+			      <th scope="col">Appointment Date</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			  
+			    <tr th:each="a : ${appointment}">
+			      <th scope="row" th:text="${'SA'+a.Aid}"></th>
+			      
+			      <td th:text="${a.name}">
+		
+			      </td>
+			      
+			      
+			      
+			      <td th:text="${a.doctorName}"></td>
+			     
+			      
+			      <td>
+			         
+			         <a th:href="@{#}"> <span th:text="${a.email}"></span> </a>
+			        
+			      
+			      </td>
+			      
+			      <td th:text="${a.date}"></td>
+			      
+			      
+			    </tr>
+			    
+			  </tbody>
+			</table>
+	            
+	            
+	            <!-- pagination part  --> 
+	            
+	            <nav aria-label="Page navigation example">
+						  <ul class="pagination">
+						  
+						    <li th:if="${currentPage!=0}" class="page-item"><a class="page-link" th:href="@{'/user/show-appointment/'+${currentPage-1}}">Previous</a></li>
+						    
+						    <li th:classappend="${currentPage==i-1?'active':''}" th:each="i : ${#numbers.sequence(1,totalPages)}" class="page-item"><a class="page-link" th:href="@{'/user/show-appointment/'+${i-1}}"><span th:text="${i}"></span></a></li> 
+						 
+						    <li th:if="${currentPage+1 != totalPages}" class="page-item"><a class="page-link" th:href="@{'/user/show-appointment/'+${currentPage+1}}">Next</a></li>
+						  </ul>
+				</nav>
+	           
+	            
+	     </div>
+	  
+	  </div>
+	  
+	  
+	 
+	</section>
+	
+</body>
+</html>

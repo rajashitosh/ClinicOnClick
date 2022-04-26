@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>Dashboard Page</title>
+</head>
+<body>
+	
+	<section class="mt-2">
+	  
+	<h1> <span th:text="${user.firstName}"></span></h1>
+	<h1> <span th:text="${user.secondName}"></span></h1>
+	<h1> <span th:text="${user.phone}"></span></h1>
+	<h1> <span th:text="${user.email}"></span></h1>
+	  
+	  
+	</section>
+	
+</body>
+</html>

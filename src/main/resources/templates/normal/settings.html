@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="normal/base::layout(~{::section})">
+<head>
+	<meta charset="UTF-8" />
+	<title>Settings Page</title>
+</head>
+<body>
+	
+	<section class="mt-2">
+	 
+	    
+	    <div class="container">
+	    
+	      <div class="row">
+	          
+	          <div class="col-md-12">
+	             
+	             <div class="card">
+	                
+	                <div class="card-body">
+	                    
+	                    <h1 class="my-3"> Change Password </h1>
+	                    
+	                    <form th:action="@{/user/change-password}" method="post">
+	                     
+	                      <!-- old password field  -->
+	                      
+	                        <div class="form-group mt-3">
+	                           
+	                           <input required name="oldPassword" type="password" class="form-control" placeholder="Enter old Password" />
+	                        
+	                        </div>
+	                        
+	                        
+	                     <!-- new password field  -->
+	                     
+	                     
+	                          <div class="form-group mt-3">
+	                           
+	                           <input required name="newPassword" type="password" class="form-control" placeholder="Enter new Password" />
+	                        
+	                        </div>
+	                    
+	                        <div class="container text-center mt-3">
+	                           
+	                           <button class="btn btn-primary" type="submit">Change</button>
+	                           <button class="btn btn-warning" type="reset">Reset</button>
+	                        
+	                        </div>
+	                    
+	                    </form>
+	                
+	                </div>
+	             
+	             </div>
+	          
+	          </div>
+	      
+	      
+	      </div>
+	     
+	    </div>
+	    
+	   
+	</section>
+	
+</body>
+</html>

@@ -74,6 +74,7 @@
       <a href="#" th:href="@{/user/new-appointment}" class="item"><i class="fa-solid fa-book-medical"></i> Book Appointment</a>
       <a href="#" th:href="@{/user/new-pharmacy}" class="item"><i class="fa-solid fa-prescription-bottle-medical"></i> Pharmacy</a>
       <a href="#" th:href="@{/user/show-pharmacy/0}" class="item"><i class="fa-solid fa-calendar-check"></i> Pharmacy History</a>
+      <a href="#" th:href="@{/user/settings}" class="item"><i class="fa-solid fa-gear"></i> Settings</a>
       <a href="#" th:href="@{/logout}" class="item"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
       
       <div class="divider"></div>
@@ -94,12 +95,25 @@
         
         <span th:text="${session.message.content}"></span>
         
-        <span > <a th:href="@{https://rzp.io/l/2NZxbxZIm1}" target="_blank">Proceed to Pay</a> </span> 
+        <span> <a th:href="@{https://rzp.io/l/2NZxbxZIm1}" target="_blank">Proceed to Pay</a> </span> 
          
           
     </div>
        
        <th:block th:text="${#session.removeAttribute('message')}"></th:block>
+       
+      </div>
+      
+      
+       <div th:if="${session.message1}" class="container">
+        
+        <div th:classappend="${session.message1.type}" class="alert alert-success m-2 text-center" role="alert">
+        
+        <span th:text="${session.message1.content}"></span>
+       
+    </div>
+       
+       <th:block th:text="${#session.removeAttribute('message1')}"></th:block>
        
       </div>
        

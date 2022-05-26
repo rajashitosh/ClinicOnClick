@@ -12,12 +12,19 @@ body{
 	
 	width:100%;
 	height:100vh;
-	background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../image/OT.jpg);
+	background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url(../image/pic1.jpg);
 	background-size:cover;
-	color:white;
+	color:black;
 }
 
-
+.banner1{
+	
+	width:100%;
+	height:100vh;
+	background:linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url(../image/Green.jpg);
+	background-size:cover;
+	color:black;
+}
 
 
 .my-card{
@@ -33,6 +40,13 @@ body{
   border: 1px solid #9C9C9C;
   background-color:white;
 }
+
+.container1{
+	
+	display: inline;
+	max-width: 400px
+}
+
 #login .container #login-row #login-column #login-box #login-form {
   padding: 20px;
 }
@@ -166,4 +180,165 @@ body{
 	border: 1px solid gray;
 	display: none;
 	
+}
+
+/* About */
+
+.container3{
+	 
+	 top: 20px;
+	
+}
+.contact{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(../image/sky.jpg); 
+    top:30px
+}
+
+.content1{
+    max-width: 1300px;
+    text-align: center;
+    padding-top: 75px;
+    margin-top: 5px;
+}
+.contact .content1 h2{
+    font-size: 36px;
+    font-weight: 500;
+    color: rgb(35, 24, 196);
+
+}
+.contact .content1 p{
+     
+    font-weight: 300;
+    color: black;
+    font-size: 20px;
+}
+.container2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.container2 .contactinfo{
+    width: 50%;
+    display: flex;
+    flex-direction:column;
+
+}
+.container2 .contactinfo .box{
+    position: relative;
+    padding: 20px 0px;
+    display: flex;
+}
+.container2 .contactinfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+.container2 .contactinfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: rgb(14, 15, 15);
+    flex-direction: column;
+    font-weight: 300;
+}
+.container2 .contactinfo .box .text h3{
+    font-weight: 500;
+    color: rgb(60, 9, 243);
+}
+.contactform{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+}
+.contactform h2{
+    font-size: 30px;
+    color: rgb(42, 28, 230);
+    font-weight: 500;
+}
+.contactform .inputbox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+
+}
+.contactform .inputbox input,
+.contactform .inputbox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    resize: none;
+}
+.contactform .inputbox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: rgb(58, 47, 45);
+}
+.contactform .inputbox input:focus ~ span,
+.contactform .inputbox input:valid ~ span,
+.contactform .inputbox textarea:focus ~ span,
+.contactform .inputbox textarea:valid ~ span
+{
+    color: rgb(58, 53, 58);
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactform .inputbox input[type="submit"]
+{
+    width: 100px;
+    background: skyblue;
+    color: rgb(9, 15, 12);
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+}
+@media(max-width:991px)
+{
+    .contact
+    {
+        padding: 50px;
+    }
+    .container2{
+        flex-direction: column; 
+    }
+    .container2 .contactinfo
+    {
+        margin-bottom: 40px;
+    }
+    .container2 .contactinfo ,.contactform{
+        width: 100%;
+    }
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: black; 
+    color: whitesmoke;
+    
+    font-size: 15px;
 }

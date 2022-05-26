@@ -26,7 +26,7 @@ public class User {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 	@NotBlank(message="First Name Field is required !!")
-	@Size(min=4,max=15,message="First Name in must be between 4-15 charactor!")
+	@Size(min=4,max=15,message="First Name in must be between 4-15 character!")
 	private String firstName;
 	
 	private String secondName;
@@ -41,7 +41,7 @@ public class User {
 	@NotBlank(message="First Name Field is required !!")
 	private String gender;
 	
-	@Size(min=10,max=10,message="Phone Number is in between 4-15 charactor!")
+	@Size(min=10,max=10,message="Phone Number is in between 4-15 character!")
 	private String phone;
 	private String role;
 	

@@ -6,15 +6,81 @@
 </head>
 <body>
 	
-	<section class="banner d-flex justify-content-center align-items-center">
+	<section>
+	 
+	 <div class="banner d-flex justify-content-center align-items-center">
+	
 	  <div class="text-center">
 	      <h1 class="font-weight-bold">Serve Appointment</h1>
-	      <p>
-	        Start Collecting your contacts in very smarter way. We provide very efficient and smarter way of 
-	        handling contacts. 
+	      <p> 
+	        “Change is terrifying for people who feel immune to it by virtue of status, divine appointment, or imagined irreplaceability.”   
 	      </p>
 	      <button class="btn bg-primary btn-lg text-white">Get Start</button>
 	  </div>
+	  
+	  </div>
+	  
+	  <div class="container3 banner1">
+	     
+	    
+	    <div class="content1">
+            <h2>Contact us</h2>
+        
+            <p>Have any question about us,support service,or anything else?Let us know and we'll
+                get back to you.</p>
+        </div>
+            
+       
+         <div class="container2">
+             <div class="contactinfo">
+                 <div class="box">
+                     <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+                     <div class="text">
+                         <h3>ADDRESS</h3>
+                         <p>463 Sugar camp road,<br>Owatonna,Minnesota,<br>55060</p>
+                     </div>
+                 </div>
+                 <div class="box">
+                    <div class="icon"><i class="fa fa-phone-square" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>PHONE</h3>
+                        <p>507-475-6094</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                    <div class="text">
+                        <h3>EMAIL</h3>
+                        <p>cliniconclick@gmail.com</p>
+                    </div>
+                </div>
+             </div>
+             <div class="contactform">
+                 <form th:action="@{/do_contact}" method="post">
+                     <h2>Send Message</h2>
+                     <div class="inputbox">
+                         <input type="text" name="name" required="required">
+                         <span>Full Name</span>
+                     </div>
+                     <div class="inputbox">
+                        <input type="email" name="email" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputbox">
+                        <textarea required="required" name="description" cols="30" rows="3"></textarea>
+                        <span>Type Your Message...</span>
+                    </div>
+                    <div class="inputbox">
+                        <input type="submit"  value="send">
+                        
+                    </div>
+                 </form>
+             </div>
+         </div>
+	   </div>
+	  
+     
+	  
 	</section>
 	
 </body>

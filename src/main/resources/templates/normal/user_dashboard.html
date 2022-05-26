@@ -7,13 +7,34 @@
 <body>
 	
 	<section class="mt-2">
-	  
-	<h1> <span th:text="${user.firstName}"></span></h1>
-	<h1> <span th:text="${user.secondName}"></span></h1>
-	<h1> <span th:text="${user.phone}"></span></h1>
-	<h1> <span th:text="${user.email}"></span></h1>
-	  
-	  
+	
+	<div class="card m-2">
+		  
+		  <div class="card-body">
+		    <h5 class="card-title">Name</h5>
+		    <p class="card-text"><span th:text="${user.firstName}"></span> <span th:text="${user.secondName}"></span></p>
+		  </div>
+		
+		
+		  <div class="card-body">
+		    <h5 class="card-title">Phone Number</h5>
+		    <p class="card-text"><span th:text="${user.phone}"></span></p>
+		  </div>
+		  
+		   <div class="card-body">
+		    <h5 class="card-title">Email</h5>
+		    <p class="card-text"><span th:text="${user.email}"></span></p>
+		  </div>
+		  
+		   <div class="card-body">
+		    <h5 class="card-title">Gender</h5>
+		    <p class="card-text"><span th:text="${user.gender}"></span></p>
+		  </div>
+	
+		</div>
+	
+
+	
 	</section>
 	
 </body>

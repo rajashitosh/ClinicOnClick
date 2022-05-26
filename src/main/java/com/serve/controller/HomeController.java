@@ -13,7 +13,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.serve.dao.ContactRepository;
 import com.serve.dao.UserRepository;
+import com.serve.entities.Contact;
 import com.serve.entities.User;
 import com.serve.helper.Message;
 
@@ -27,6 +29,9 @@ public class HomeController {
 	
 	@Autowired
 	private UserRepository userRepository;
+	
+	@Autowired
+	private ContactRepository contactRepository;
 	
 	@GetMapping("/")
 	public String home(Model model) {
@@ -106,5 +111,20 @@ public class HomeController {
 		return "login";
 	}
 	
+	@PostMapping("/do_contact")
+	public String contactUs(@ModelAttribute("conatct") Contact contact) {
+		
+		Contact contact1=this.contactRepository.save(contact);
+		
+		System.out.println(contact1);
+		
+		return "home";
+	}
 	
+	@GetMapping("/find-doctor")
+	public String findDoctor(Model model) {
+		
+		model.addAttribute("title", "Find Doctor - ServeAppointment");
+		return "find_doctor";
+	}
 }

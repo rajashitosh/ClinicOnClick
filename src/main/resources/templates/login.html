@@ -7,7 +7,9 @@
 <body>
 	
 	<section>
-	<div id="login" class="banner1">
+	<div id="login">
+	
+	
        
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">
@@ -22,6 +24,10 @@
                             
                             <div th:if="${param.logout}" class="alert alert-success">
                                  You have been logged out
+                             </div>
+                             
+                             <div th:if="${param.change}" class="alert alert-success">
+                                 <p th:text="${param.change}"></p>
                              </div>
                           
                             <div class="form-group">
@@ -41,11 +47,18 @@
                                 <a href="/signup/" class="text-lg-right">Register here</a>
                             </div>
                             
+                            <div class="text-info mt-3">
+                              
+                              <a  th:href="@{/forgot}" class="text-lg-right">Forgot Password</a>
+                            
+                            </div>
+                            
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+        
     </div>
     
     

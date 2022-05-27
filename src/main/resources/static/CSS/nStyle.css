@@ -1,7 +1,123 @@
-.banner2{
-	
-	
-	background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../image/OT.jpg);
-	background-size:cover;
-	color:white;
+.about{
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about .cnt img{
+    height: auto;
+    width: 600px;
+    max-width: 100%;
+}
+.text{
+    width: 550px;
+    max-width: 100%;
+    padding: 0px 10px;
+}
+.cnt{
+    width: 1280px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+.text h2{
+    color: chocolate;
+    font-size: 85px;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+.text h5{
+    color: brown;
+    font-size: 25px;
+    margin-bottom: 25px;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+.text p{
+    color: rgb(8, 12, 10);
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    margin-bottom: 45px;
+}
+button{
+    background-color: yellow;
+    color: black;
+    border: 2px solid transparent;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: bold;
+}
+button:hover{
+    transform: scale(1.2);
+    background-color: transparent;
+    border: 2px solid green;
+    color: brown;
+    transition: .4s;
+    cursor: pointer;
+}
+
+
+.heading{
+    text-align: center;
+    padding-bottom: 2rem;
+    text-shadow: var(--text-shadow);
+    
+    color: var(--black);
+    font-size: 3rem;
+    letter-spacing: .4rem;
+}
+
+.box{
+    height: 105%;
+    width: 71%;
+    flex-wrap: wrap;
+    float: left;
+}
+.team{
+    display: flex;
+    text-align: center;
+    width: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: -1;
+}
+.team .team-member{
+    background-color: aquamarine;
+    margin: 5px;
+    width: 300px;
+    padding: 20px;
+    line-height: 20px;
+    position: relative;
+
+}
+.team .team-member h3{
+    color: orange;
+    font-size: 1rem;
+    margin-top: 50px;
+}
+.team .team-member i{
+    border-radius: 100px;
+    width: 100px;
+
+    
+}
+
+@media  screen and (max-width:650px) {
+    .about .cnt img{
+        margin-bottom: 35px;
+    }
+    .text h1{
+        font-size: 60px;
+        margin-bottom: 25px;
+
+    }
+    
 }
